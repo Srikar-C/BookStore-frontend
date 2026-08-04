@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+* {
+  font-family: var(--font-body);
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-playfair);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+}
+
+:root {
+  --background: #f5f7fb;
+  --foreground: #0f172a;
+  --background-hover: #0f172a;
+  --foreground-hover: #f8fafc;
+  --gray: #6c6c6cd1;
+  --input-bg: #ffffff;
+  --input-border: #d7e2f0;
+  --input-label: #64748b;
+  --input-placeholder: #94a3b8;
+  --input-icon: #2563eb;
+  --input-icon-bg: rgba(37, 99, 235, 0.12);
+  --input-ring: #2563eb;
+  --input-focus-ring: rgba(37, 99, 235, 0.17);
+  --section-hover: #cad5e2;
+  --hr: #36415332;
+  --skeleton-bg: #e5e7eb;
+  --skeleton-wave: rgba(255, 255, 255, 0.6);
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --background-hover: #f8fafc;
+  --foreground-hover: #020617;
+  --gray: #d2dcdb;
+  --input-bg: rgba(15, 23, 42, 0.92);
+  --input-border: rgba(148, 163, 184, 0.28);
+  --input-label: #cbd5e1;
+  --input-placeholder: #64748b;
+  --input-icon: #60a5fa;
+  --input-icon-bg: rgba(96, 165, 250, 0.16);
+  --input-ring: #60a5fa;
+  --input-focus-ring: rgba(96, 165, 250, 0.2);
+  --section-hover: #314158;
+  --hr: #e5e7eb44;
+  --skeleton-bg: #334155;
+  --skeleton-wave: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
